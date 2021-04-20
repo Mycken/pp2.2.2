@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>List of Cars</title>
+</head>
+<body>
+
+
+
+    <th:block th:whith="msg = ${message}">
+
+        <table border="5">
+            <tr>
+                <th>No</th>
+                <th>Marka</th>
+                <th>Serie</th>
+                <th>Yaer</th>
+            </tr>
+
+            <tr th:each="msg,state : ${message}">
+
+                <td th:text="${state.count}"></td>
+                <td th:text="${msg.marka}"></td>
+                <td th:text="${msg.serie}"></td>
+                <td th:text="${msg.year}"></td>
+            </tr>
+        </table>
+    </th:block>
+    <h1 th:text="${counter}"></h1>
+</body>
+</html>
